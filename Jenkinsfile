@@ -1,3 +1,4 @@
+# Jenkinsfile for my-app2:
 pipeline{
   agent any
   stages{
@@ -8,14 +9,14 @@ pipeline{
         sh 'mvn clean'
       }
     }
-    stage(---test---){
+    stage('---test---'){
       steps{
         sh 'mvn test'
         // POM: here we not given: sh 'mvn test -f my-app2'
         // Coz, We are already inside the folder my-app2
       }
     }
-    stage(---package---){
+    stage('---package---'){
       steps{
         sh 'mvn package'
       }
