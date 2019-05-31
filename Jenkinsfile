@@ -13,12 +13,18 @@ pipeline{
       steps{
         sh 'mvn test'
         // POM: here we not given: sh 'mvn test -f my-app2'
-        // Coz, We are already inside the folder my-app2
+        // Coz, all the files are already cloned into job
+        // named folder inside workspace of jenkins.
       }
     }
     stage('---package---'){
       steps{
         sh 'mvn package'
+      }
+    }
+    stage('---deploy to tomcat---'){
+      steps{
+        sh 'cp'
       }
     }
   }
