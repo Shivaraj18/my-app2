@@ -24,7 +24,7 @@ pipeline{
     }
     stage('---deploy to tomcat---'){
       steps{
-        sh 'cp'
+        sh 'cp -r **/*.war /opt/tomcat/webapps/'
       }
     }
   }
