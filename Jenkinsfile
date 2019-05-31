@@ -1,4 +1,4 @@
-# Jenkinsfile for my-app2:
+// Jenkinsfile for my-app2:
 pipeline{
   agent any
   stages{
